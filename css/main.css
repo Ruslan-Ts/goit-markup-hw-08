@@ -135,14 +135,7 @@ body {
 .modal__svg {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: 0;
-}
-
-.form__title {
+.modal__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -151,27 +144,27 @@ body {
   color: var(--text-dark);
   margin-bottom: 12px;
 }
-.form__lable {
+.modal__lable {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--text-second-color);
 }
-.form__field:not(:first-child) {
+.modal__field:not(:first-child) {
   margin-top: 10px;
 }
-.form__wrap {
+.modal__wrap {
   position: relative;
 }
-.form__icon {
+.modal__icon {
   position: absolute;
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form__input {
+.modal__input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -181,17 +174,17 @@ body {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-top: 4px;
 }
-.form__input:focus {
+.modal__input:focus {
   border-color: var(--accent-color);
 }
-.form__input:focus + .form__icon {
+.modal__input:focus + .modal__icon {
   fill: var(--accent-color);
 }
-.form__comment {
+.modal__comment {
   margin-top: 10px;
   margin-bottom: 20px;
 }
-.form__input-comment {
+.modal__input-comment {
   width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -202,21 +195,21 @@ body {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-top: 4px;
 }
-.form__input-comment:focus {
+.modal__input-comment:focus {
   border-color: var(--accent-color);
 }
-.form__input-comment::placeholder {
+.modal__input-comment::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.form__chekbox {
+.modal__chekbox {
   padding-bottom: 30px;
   margin-left: 12px;
 }
-.form__checkbox-label {
+.modal__checkbox-label {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -225,7 +218,7 @@ body {
   display: flex;
   align-items: center;
 }
-.form__check-span {
+.modal__check-span {
   width: 16px;
   height: 15px;
   border: 2px solid #303030;
@@ -237,24 +230,24 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form__check-icon {
+.modal__check-icon {
   fill: transparent;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form__checkbox-input:checked + .form__checkbox-label .form__check-span {
+.modal__checkbox-input:checked + .modal__checkbox-label .modal__check-span {
   background-color: var(--accent-color);
   border: none;
 }
-.form__checkbox-input:checked + .form__checkbox-label .form__check-icon {
+.modal__checkbox-input:checked + .modal__checkbox-label .modal__check-icon {
   fill: var(--text-light);
 }
-.form__checkbox-text {
+.modal__checkbox-text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.form__checkbox-link {
+.modal__checkbox-link {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -262,7 +255,7 @@ body {
   text-decoration-line: underline;
   color: var(--accent-color);
 }
-.form__sub {
+.modal__sub {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -281,6 +274,12 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-width: 0;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: 0;
 }
 
 .header {
@@ -666,16 +665,6 @@ body {
 .subscribe__icon {
   margin-left: 10px;
 }
-.subscribe__title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--text-light);
-  padding-top: 15px;
-  margin-bottom: 20px;
-}
 .subscribe__input {
   width: 358px;
   height: 50px;
@@ -733,7 +722,7 @@ body {
 .nav-projects__btn:hover, .nav-projects__btn:focus {
   color: var(--text-light);
   background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgb(0, 0, 0), 0px 1px 2px rgba(0, 0, 0, 0.08) 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .projects {
