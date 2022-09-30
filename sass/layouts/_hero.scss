@@ -1,32 +1,67 @@
 .hero {
     background-color: var(--second-bgcolor);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/hero-bg.jpeg);
+        url(../images/hero-mob.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 200px 0;
+    padding: 118px 0;
+
+    @include retina {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-mob2x.jpeg);
+            }
+    @include tablet {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-tab.jpeg);
+        @include retina {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-tab2x.jpeg);
+            } 
+        }   
+    @include desktop {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg.jpeg);
+        @include retina {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg2x.jpeg);
+            } 
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 200px 0;   
+        }
+    
     
     &__text {
-            font-weight: 900;
-            // font-size: 44px;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 1.62;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--text-light);
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+
+        @include mobile {
+            max-width: 480px;
             font-size: 26px;
-            // line-height: 1.36;
-            line-height: 1.62;
-            text-align: center;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: var(--text-light);
+        }
+        @include tablet {
+
+        }
+        @include desktop {
+            font-size: 44px;
+            line-height: 1.36;
             max-width: 696px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 30px;
+        }
+
     
     
         }
-
+    
     &__btn {
     font-family: 'Roboto';
     font-style: normal;
@@ -48,5 +83,6 @@
     border-width: 0;
 }
 }
+
 
 

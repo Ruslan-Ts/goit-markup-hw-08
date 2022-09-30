@@ -10,13 +10,22 @@
         }
     &__list {
         display: flex;
-        justify-content: space-between;
-}
+        flex-wrap: wrap;
+        gap: 30px;
+    }
     &__item {
-        width: 170px;
+        // width: 170px;
         height: 92px;
+        width: calc((100% - 30px) / 2);
         border: 1px solid var(--icon-color);
         border-radius: 4px;
+        @include tablet {
+                width: calc((100% - 60px) / 3);
+            }
+        
+            @include desktop {
+                width: calc((100% - 150px) / 6);
+            }
         
         &:hover {
             border: 1px solid var(--accent-color)

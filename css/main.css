@@ -1,5 +1,7 @@
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 button {
@@ -79,15 +81,42 @@ body {
 }
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .backdrop {
@@ -360,28 +389,67 @@ body {
 
 .hero {
   background-color: var(--second-bgcolor);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpeg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mob.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 200px 0;
+  padding: 118px 0;
 }
-.hero .hero__text {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mob2x.jpeg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tab.jpeg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tab2x.jpeg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpeg);
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 200px 0;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg2x.jpeg);
+  }
+}
+.hero__text {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 20px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-light);
-  max-width: 696px;
+  max-width: 300px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
 }
-.hero .hero__btn {
+@media screen and (min-width: 480px) {
+  .hero__text {
+    max-width: 480px;
+    font-size: 26px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__text {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
+}
+.hero__btn {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -404,7 +472,8 @@ body {
 
 .benefits__list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .benefits__list .benefits__item:nth-child(1)::before {
   background-image: url(../images/antenna.svg);
@@ -417,6 +486,19 @@ body {
 }
 .benefits__list .benefits__item:nth-child(4)::before {
   background-image: url(../images/astronaut.svg);
+}
+.benefits__list .benefits__item {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .benefits__list .benefits__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits__list .benefits__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 .benefits__list .benefits__item::before {
   display: block;
@@ -434,8 +516,14 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: var(--text-dark);
   margin-bottom: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .benefits__list .benefits__title {
+    text-align: start;
+  }
 }
 .benefits__list .benefits__text {
   font-weight: 400;
@@ -445,11 +533,16 @@ body {
   color: var(--text-second-color);
   margin-left: auto;
   margin-right: auto;
-  max-width: 270px;
 }
 
 .activity {
+  display: none;
   padding-bottom: 94px;
+}
+@media screen and (min-width: 1200px) {
+  .activity {
+    display: block;
+  }
 }
 .activity__title {
   font-weight: 700;
@@ -498,15 +591,23 @@ body {
 }
 .team__list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .team__item {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--text-light);
 }
-.team__img {
-  margin-bottom: 30px;
+@media screen and (min-width: 768px) {
+  .team__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 .team__name {
   font-weight: 500;
@@ -516,6 +617,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--text-dark);
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 .team__position {
   font-weight: 400;
@@ -573,13 +675,24 @@ body {
 }
 .clients__list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .clients__item {
-  width: 170px;
   height: 92px;
+  width: calc((100% - 30px) / 2);
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 .clients__item:hover {
   border: 1px solid var(--accent-color);
@@ -616,6 +729,9 @@ body {
   background-color: var(--second-bgcolor);
   padding: 60px 0;
 }
+.footer__main-item {
+  text-align: center;
+}
 .footer__address {
   font-style: normal;
   font-weight: 400;
@@ -625,6 +741,9 @@ body {
   color: var(--text-light);
   margin-top: 20px;
   margin-bottom: 10px;
+}
+.footer__main-item:not(:last-child) {
+  margin-bottom: 60px;
 }
 .footer__item:not(:last-child) {
   margin-bottom: 10px;
@@ -643,12 +762,6 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-light);
-  padding-top: 15px;
-  margin-bottom: 20px;
-}
-.footer__main-list {
-  display: flex;
-  justify-content: space-between;
 }
 
 .socials__link--bg-gray {
@@ -660,22 +773,21 @@ body {
 }
 
 .subscribe {
-  display: flex;
+  display: inline-block;
+  height: 100%;
 }
 .subscribe__icon {
   margin-left: 10px;
 }
 .subscribe__input {
-  width: 358px;
+  min-width: 450px;
   height: 50px;
-  left: 815px;
-  top: 2787px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: var(--second-bgcolor);
   color: var(--text-light);
-  padding-left: 16px;
+  margin-bottom: 20px;
 }
 .subscribe__btn {
   font-family: "Roboto";
@@ -694,15 +806,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 12px;
 }
 
 .nav-projects {
   display: flex;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  width: 611px;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 326px;
   margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  .nav-projects {
+    max-width: 575px;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
 }
 .nav-projects__btn {
   font-family: "Roboto";
@@ -728,7 +847,6 @@ body {
 .projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 30px;
 }
 .projects__text {

@@ -2,10 +2,24 @@
 
 .nav-projects {
     display: flex;
-    justify-content: space-evenly;
-    margin: 0 auto;
-    width: 611px;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 326px;
+    // justify-content: flex-start;
+    // margin: 0 auto;
     margin-bottom: 50px;
+
+    @include tablet {
+        max-width: 575px;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+
+    &__item {
+       
+    }
    
     &__btn {
         font-family: 'Roboto';

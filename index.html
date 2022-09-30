@@ -55,11 +55,11 @@
             </div>
     </header> -->
     <main class="main">
-        <section class="hero section">
+        <section class="hero container">
             <h1 class="hero__text">Ефективні рішення для вашого бізнесу</h1>
             <button class="hero__btn link" type="button" data-modal-open>Замовити послугу</button>
         </section>
-        <!-- <section class="benefits section">
+        <section class="benefits section">
             <div class="container">
             <h2 class="visually-hidden">Переваги</h2>
              <ul class="benefits__list list">
@@ -81,8 +81,8 @@
                  </li>
              </ul>
             </div>
-        </section> -->
-        <!-- <section class="activity">
+        </section>
+        <section class="activity">
             <div class="container">
             <h2 class="activity__title">Чим ми займаємося</h2>
             <ul class="activity__list list">
@@ -100,13 +100,27 @@
                 </li>
             </ul>
             </div>
-        </section> -->
-        <!-- <section class="team section">
+        </section>
+        <section class="team section">
             <div class="container">
             <h2 class="team__title">Наша команда</h2>
             <ul class="team__list list">
                 <li class="team__item">
-                    <img class="team__img" width="270" src="./images/photo1.jpeg" alt="Дизайнер">
+                    <picture class="team__pic">
+                        <source srcset="
+                                        ./images/photo1.jpeg    1x,
+                                        ./images/photo1-2x.jpeg 2x
+                                      " media="(min-width: 1200px)" />
+                        <source srcset="
+                                        ./images/photo1-tab.jpeg    1x,
+                                        ./images/photo1-tab2x.jpeg 2x
+                                      " media="(min-width: 768px)" />
+                        <source srcset="
+                                        ./images/photo1-mob.jpeg    1x,
+                                        ./images/photo1-mob2x.jpeg 2x
+                                      " media="(max-width: 767px)" />
+                        <img src="./images/photo1.jpeg" alt="Дизайнер" />
+                    </picture>
                     <h3 class="team__name">Ігор Дем'яненко</h3>
                     <p class="team__position" lang="en">Product Designer</p>
                     <ul class="socials list">
@@ -141,7 +155,21 @@
                     </ul>
                 </li>
                 <li class="team__item">
-                    <img class="team__img" width="270" src="./images/photo2.jpeg" alt="Разработчик">
+                    <picture class "team__pctr">
+                        <source srcset="
+                                        ./images/photo2.jpeg    1x,
+                                        ./images/photo2-2x.jpeg 2x
+                                      " media="(min-width: 1200px)" />
+                        <source srcset="
+                                        ./images/photo2-tab.jpeg    1x,
+                                        ./images/photo2-tab2x.jpeg 2x
+                                      " media="(min-width: 768px)" />
+                        <source srcset="
+                                        ./images/photo2-mob.jpeg    1x,
+                                        ./images/photo2-mob2x.jpeg 2x
+                                      " media="(max-width: 767px)" />
+                        <img src="./images/photo2.jpeg" alt="Розробник" />
+                    </picture>
                     <h3 class="team__name">Ольга Рєпіна</h3>
                     <p class="team__position" lang="en">Frontend Developer</p>
                     <ul class="socials list">
@@ -176,7 +204,20 @@
                     </ul>
                 </li>
                 <li class="team__item">
-                    <img class="team__img" width="270" src="./images/photo3.jpeg" alt="Маркетолог">
+                   <picture class "team__pctr">
+                        <source srcset="
+                                        ./images/photo3.jpeg    1x,
+                                        ./images/photo3-2x.jpeg 2x
+                                      " media="(min-width: 1200px)" />
+                        <source srcset="
+                                        ./images/photo3-tab.jpeg    1x,
+                                        ./images/photo3-tab2x.jpeg 2x
+                                      " media="(min-width: 768px)" />
+                        <source srcset="
+                                        ./images/photo3-mob.jpeg    1x,
+                                        ./images/photo3-mob2x.jpeg 2x
+                                      " media="(max-width: 767px)" />
+                        <img src="./images/photo3.jpeg" alt="Маркетолог" />
                     <h3 class="team__name">Микола Тарасов</h3>
                     <p class="team__position" lang="en">Marketing</p>
                     <ul class="socials list">
@@ -211,7 +252,21 @@
                     </ul>
                 </li>
                 <li class="team__item">
-                    <img class="team__img" width="270" src="./images/photo4.jpeg" alt="Дизайнер">
+                <picture class "team__pctr">
+                        <source srcset="
+                                        ./images/photo4.jpeg    1x,
+                                        ./images/photo4-2x.jpeg 2x
+                                      " media="(min-width: 1200px)" />
+                        <source srcset="
+                                        ./images/photo4-tab.jpeg    1x,
+                                        ./images/photo4-tab2x.jpeg 2x
+                                      " media="(min-width: 768px)" />
+                        <source srcset="
+                                        ./images/photo4-mob.jpeg    1x,
+                                        ./images/photo4-mob2x.jpeg 2x
+                                      " media="(max-width: 767px)" />
+                        <img src="./images/photo4.jpeg" alt="Дизайнер" />
+                    </picture>
                     <h3 class="team__name">Михайло Єрмаков</h3>
                     <p class="team__position" lang="en">UI Designer</p>
                     <ul class="socials list">
@@ -247,8 +302,8 @@
                 </li>
             </ul>
             </div>
-        </section> -->
-        <!-- <section class="clients section">
+        </section>
+        <section class="clients section">
             <div class="container">
             <h2 class="clients__title">Постійні клієнти</h2>
             <ul class="clients__list list">
@@ -296,9 +351,9 @@
                 </li>
             </ul>
             </div>
-        </section> -->
+        </section>
     </main>
-<!-- <footer class="footer">
+<footer class="footer">
     <div class="container">
         <ul class="footer__main-list list">
             <li class="footer__main-item">
@@ -349,7 +404,7 @@
                 </ul>
             </li>
             <li class="footer__main-item">
-                    <h3 class="footer__soc-title">Підпишіться на розсилку</h3>
+                <h3 class="footer__soc-title">Підпишіться на розсилку</h3>
                 <form class="subscribe">
                     <input type="email" class="subscribe__input" name="user-sub" placeholder="E-mail"
                         id="user-sub" />
@@ -367,7 +422,7 @@
 
         </ul>
     </div>
-</footer> -->
+</footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal__btn" data-modal-close>
