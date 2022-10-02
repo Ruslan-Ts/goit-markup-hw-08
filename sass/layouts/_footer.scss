@@ -1,9 +1,29 @@
-.footer {
+ .footer {
     background-color: var(--second-bgcolor);
     padding: 60px 0;
 
+    &__main-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: baseline;
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+                @include desktop {
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                }
+
+    }
+
     &__main-item {
         text-align: center;
+        @include desktop {
+            text-align: start;
+        }
     }
 
     &__address {
@@ -17,9 +37,9 @@
         margin-bottom: 10px;
     }
 
-        &__main-item:not(:last-child) {
-            margin-bottom: 60px;
-        }
+        // &__main-item:not(:last-child) {
+        //     margin-bottom: 60px;
+        // }
     &__item:not(:last-child) {
         margin-bottom: 10px;
         }
@@ -33,12 +53,12 @@
     &__soc-title {
             font-weight: 700;
             font-size: 14px;
-            line-height: 1.14px;
+            line-height: 1.14;
             letter-spacing: 0.03em;
             text-transform: uppercase;
             color: var(--text-light);
             // padding-top: 15px;
-            // margin-bottom: 20px;
+            margin-bottom: 20px;
         }
     // &__main-list {
     //     display: flex;
@@ -58,15 +78,19 @@ background-color: rgba(255, 255, 255, 0.1);
 
 .subscribe {
 display: inline-block;
-height: 100%;
+width: 100%;
+@include desktop {
+    display: flex;
+    gap: 12px;
+}
 
     &__icon {
         margin-left: 10px;
     }
 
     &__input {
-        // width: 100%;
-        min-width: 450px;
+        width: 100%;
+        // min-width: 450px;
         height: 50px;
         // left: 815px;
         // top: 2787px;
@@ -75,12 +99,19 @@ height: 100%;
         border-radius: 4px;
         background-color: var(--second-bgcolor);
         color: var(--text-light);
-        // padding-left: 16px;
+        padding-left: 16px;
         margin-bottom: 20px;
+
+        @include tablet {
+            width: 450px;
+        }
+                 @include desktop {
+                     width: 358px;
+                     margin-bottom: 0;
+                 }
     }
     &__btn {
-        font-family: 'Roboto';
-        font-style: normal;
+        font-family: inherit;
         font-weight: 700;
         font-size: 16px;
         line-height: 1.88;
@@ -95,7 +126,8 @@ height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        // margin-left: 12px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

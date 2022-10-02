@@ -29,7 +29,14 @@
         &:hover .projects__text {
             transform: translateY(0);
                         }
-    }
+            @include tablet {
+                flex-basis: calc((100% - 30px) / 2);
+                                                        }
+                                                                                                                        @include desktop {
+                                                                                                                            flex-basis: auto;
+                                                                                                                        }
+                    }
+    
     &__title {
         font-weight: 700;
         font-size: 18px;
@@ -58,6 +65,7 @@
         overflow: hidden;
     }
 }
+
 
 
 
