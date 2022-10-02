@@ -887,7 +887,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 60px;
-  align-items: baseline;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .footer__main-list {
@@ -1003,6 +1003,11 @@ body {
   margin-right: auto;
 }
 
+@media screen and (max-width: 767px) {
+  .footer__main-item {
+    width: 100%;
+  }
+}
 .nav-projects {
   display: flex;
   flex-wrap: wrap;
