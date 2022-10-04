@@ -5,6 +5,19 @@
     // justify-content: space-between;
     gap: 30px;
 
+    &__link {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        
+        &:hover .projects__text,
+        &:focus .projects__text {
+        transform: translateY(0);
+
+    
+    }
+    }
+
     &__text {
         position: absolute;
         font-weight: 400;
@@ -26,9 +39,7 @@
         &:focus {
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),1px 4px 6px rgba(0, 0, 0, 0.16);
             }
-        &:hover .projects__text {
-            transform: translateY(0);
-                        }
+        
             @include tablet {
                 flex-basis: calc((100% - 30px) / 2);
                                                         }
@@ -59,6 +70,7 @@
         border-left: 1px solid #EEEEEE;
         border-right: 1px solid #EEEEEE;
         border-bottom: 1px solid #EEEEEE;
+        flex-grow: 1;
     }
     &__wrap {
         position: relative;

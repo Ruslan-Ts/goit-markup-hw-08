@@ -53,9 +53,11 @@
             text-align: center;
             color: var(--text-dark);
             margin-bottom: 10px;
-            @include desktop {
-            text-align: start;               
-            }
+            @include tablet {
+                   
+                        text-align: start;
+                    }
+            
     
         }
 
