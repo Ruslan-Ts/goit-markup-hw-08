@@ -1,0 +1,76 @@
+
+.benefits__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    // justify-content: space-between;
+
+    
+        .benefits__item:nth-child(1)::before {
+            background-image: url(../images/antenna.svg);
+        }
+    
+        .benefits__item:nth-child(2)::before {
+            background-image: url(../images/clock.svg);
+        }
+    
+        .benefits__item:nth-child(3)::before {
+            background-image: url(../images/diagram.svg);
+        }
+    
+        .benefits__item:nth-child(4)::before {
+            background-image: url(../images/astronaut.svg);
+        }
+    .benefits__item {
+        width: 100%;
+        @include tablet {
+            width: calc((100% - 30px) / 2);
+        }
+        @include desktop {
+            width: calc((100% - 90px) / 4);
+        }
+
+
+    }
+
+        .benefits__item::before {
+                    display: block;
+                    content: '';
+                    height: 120px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-color: #f5f4fa;
+                    border-radius: 4px;
+                    margin-bottom: 30px;
+            }
+    
+        .benefits__title {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.14;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            text-align: center;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            @include tablet {
+                   
+                        text-align: start;
+                    }
+            
+    
+        }
+
+        .benefits__text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.71;
+            letter-spacing: 0.03em;
+            color: var(--text-second-color);
+            margin-left: auto;
+            margin-right: auto;
+            // max-width: 270px;
+    
+        }
+}
+
